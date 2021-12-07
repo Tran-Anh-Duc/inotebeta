@@ -49,13 +49,13 @@ class NoteController extends Controller
     public function search(Request $request)
     {
         $output = '';
-        $notes = Note::where('name','LIKE','%'.$request->keyword.'%')->get();
-        foreach ($notes as $item){
-            $output = '<tr>
-                        <td>$item->id</td>
-                        <td>$item->name</td>
-                        <td>$item->description</td>
-                        <td>$item->category</td>
+        $notes = Note::where('name', 'LIKE', '%' . $request->keyword . '%')->get();
+        foreach ($notes as $note) {
+            $output .= '<tr>
+                        <td>'.$note->id.'</td>
+                        <td>'.$note->name.'</td>
+                        <td>'.$note->description.'</td>
+                        <td>'.$note->category.'</td>
                         </tr>';
         }
         return response()->json($output);

@@ -23,7 +23,8 @@ class AuthController extends Controller
             toastr()->success('Success Message');
             return redirect()->route('notes.index');
         }else{
-            dd('login Fail');
+//            dd('login Fail');
+            return  view('backend.auth.error');
         }
     }
 

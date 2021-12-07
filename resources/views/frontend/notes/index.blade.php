@@ -3,7 +3,7 @@
     @section('content')
 
 <div class="container">
-    <a href="#" class="btn btn-success btn-add" data-target="#modal-add" data-toggle="modal">Add</a>
+{{--    <a href="#" class="btn btn-success btn-add" data-target="#modal-add" data-toggle="modal">Add</a>--}}
     <div class="table-responsive">
         <table class="table table-hover">
             <thead>
@@ -27,9 +27,9 @@
                     <td id="description-{{$note->id}}">{{$note->description}}</td>
                     <td id="category-{{$note->id}}">{{$note->category}}</td>
 
-                        <td><button data-url="{{ route('notes.show',$note->id) }}"​ type="button" data-target="#show" data-toggle="modal" class="btn btn-info btn-show">Detail</button><td>
-                       <td> <button data-url="{{ route('notes.update',$note->id) }}"​ type="button" data-target="#modal-edit" data-toggle="modal" class="btn btn-warning btn-edit">Edit</button></td>
-                    <td> <button data-url="{{ route('notes.destroy',$note->id) }}"​ type="button" data-target="#delete" class="btn btn-danger btn-delete">Delete</button></td>
+                        <td><button data-url="{{ route('notes.show',$note->id) }}" type="button" data-target="#show" data-toggle="modal" class="btn btn-info btn-show">Detail</button><td>
+                       <td> <button data-url="{{ route('notes.update',$note->id) }}" type="button" data-target="#modal-edit" data-toggle="modal" class="btn btn-warning btn-edit">Edit</button></td>
+                    <td> <button data-url="{{ route('notes.destroy',$note->id) }}" type="button" data-target="#delete" class="btn btn-danger btn-delete">Delete</button></td>
 
                 </tr>
             @endforeach
@@ -86,9 +86,9 @@
                         '<td id="name-'+response.data.id+'">'+response.data.name+'</td>' +
                         '<td id="description-'+response.data.id+'">'+response.data.description+'</td>' +
                         '<td id="category-'+response.data.id+'">'+response.data.category+'</td>' +
-                        '<td><button data-url="{{asset('')}}notes/'+response.data.id+'"​ type="button" data-target="#show" data-toggle="modal" class="btn btn-info btn-show">Detail</button></td>' +
-                        '<td><button style="margin-left: 5px;" data-url="{{asset('')}}notes/'+response.data.id+'"​ type="button" data-target="#edit" data-toggle="modal" class="btn btn-warning btn-edit">Edit</button></td>' +
-                        '<td><button style="margin-left: 5px;" data-url="{{asset('')}}notes/'+response.data.id+'"​ type="button" data-target="#delete" data-toggle="modal" class="btn btn-danger btn-delete">Delete</button></td>' +
+                        '<td><button data-url="{{asset('')}}notes/'+response.data.id+'" type="button" data-target="#show" data-toggle="modal" class="btn btn-info btn-show">Detail</button></td>' +
+                        '<td><button style="margin-left: 5px;" data-url="{{asset('')}}notes/'+response.data.id+'" type="button" data-target="#edit" data-toggle="modal" class="btn btn-warning btn-edit">Edit</button></td>' +
+                        '<td><button style="margin-left: 5px;" data-url="{{asset('')}}notes/'+response.data.id+'" type="button" data-target="#delete" data-toggle="modal" class="btn btn-danger btn-delete">Delete</button></td>' +
                         '</tr>');
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
