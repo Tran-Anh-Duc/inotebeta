@@ -20,6 +20,15 @@
                         <input type="text" name="description" id="description-edit" class="form-control" value="" required="required" title="">
                     </div>
 
+                    <div class="form-group">
+                        <label for="">Category</label>
+                        <select name="category" id="category-edit" class="form-control" required="required">
+                            <option value="work">Đi làm</option>
+                            <option value="school">Đi học </option>
+                            <option value="play">Đi chơi</option>
+                        </select>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

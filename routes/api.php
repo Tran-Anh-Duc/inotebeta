@@ -25,3 +25,5 @@ Route::put('/update/{id}',[NoteController::class,'update'])->name('notes.update'
 Route::get('/update/{id}',[NoteController::class,'edit'])->name('notes.edit');
 Route::delete('/delete{id}',[NoteController::class,'destroy'])->name('notes.destroy');
 Route::get('/detail{id}',[NoteController::class,'show'])->name('notes.show');
+Route::get('/search',[NoteController::class,'search']);
+

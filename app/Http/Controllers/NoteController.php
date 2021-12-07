@@ -45,4 +45,19 @@ class NoteController extends Controller
         Note::find($id)->delete();
         return response()->json(['data' => 'removed'], 200);
     }
+
+    public function search(Request $request)
+    {
+        $output = '';
+        $notes = Note::where('name','LIKE','%'.$request->keyword.'%')->get();
+        foreach ($notes as $item){
+            $output = '<tr>
+                        <td>$item->id</td>
+                        <td>$item->name</td>
+                        <td>$item->description</td>
+                        <td>$item->category</td>
+                        </tr>';
+        }
+        return response()->json($output);
+    }
 }

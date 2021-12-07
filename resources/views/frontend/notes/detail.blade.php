@@ -11,6 +11,7 @@
                 id : <h1 id="id"></h1>
                 Name : <h1 id="name"></h1>
                 Description : <h1 id="description"></h1>
+                Category : <h1 id="category"></h1>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

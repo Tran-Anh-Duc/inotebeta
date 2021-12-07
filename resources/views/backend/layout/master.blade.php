@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title','Home')</title>
-
-
-
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -20,8 +18,13 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     @toastr_css
 </head>
 
@@ -52,7 +55,7 @@
                 <form
                     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        <input type="text" name="keyword" id="keyword" class="form-control bg-light border-0 small" placeholder="Search for..."
                                aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
@@ -275,40 +278,33 @@
 </a>
 
 <!-- Logout Modal-->
-{{--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"--}}
-{{--        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>--}}
-{{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"--}}
-{{--        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript" charset="utf-8" async defer></script>--}}
-{{--<script type="text/javascript" charset="utf-8">--}}
-{{--    $.ajaxSetup({--}}
-{{--        headers: {--}}
-{{--            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--        }--}}
-{{--    });--}}
-{{--</script>--}}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 <!-- Bootstrap core JavaScript-->
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+{{--<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>--}}
+{{--<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>--}}
 
 <!-- Core plugin JavaScript-->
-<script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+{{--<script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>--}}
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 
 <!-- Page level plugins -->
-<script src="{{asset('vendor/chart.js/Chart.min.js')}}"></script>
+{{--<script src="{{asset('vendor/chart.js/Chart.min.js')}}"></script>--}}
 
 <!-- Page level custom scripts -->
-<script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
-<script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
+{{--<script src="{{asset('js/demo/chart-area-demo.js')}}"></script>--}}
+{{--<script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>--}}
 
 </body>
 @jquery
 @toastr_js
 @toastr_render
 </html>
+
+
 
 
 
